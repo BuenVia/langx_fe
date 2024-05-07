@@ -43,8 +43,10 @@ const Home = () => {
 
             {groups.map(group => {
                 return (
-                    <div>
-                        <a key={group.id} href={`/practice/${group.id}`}>{group.level}: {group.group}</a>
+                    <div key={group.id} className="card">
+                        <p>{group.level}: {group.group}</p>
+                        {console.log(group)}
+                        <a href={`/practice/${group.id}`}>Practice</a>
                     </div>
                 )
             })}
