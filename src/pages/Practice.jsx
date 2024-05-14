@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Card from "../components/card";
 
 
 const Practice = () => {
@@ -25,6 +26,7 @@ const Practice = () => {
     return (
         <div>
             <h1>Practice</h1>
+            <Card sentences={sentences} />
             {sentences.length > 0 ? 
             sentences.map(sentence => {
                 return <p key={sentence.id}>{sentence.sentence_spa}</p>
